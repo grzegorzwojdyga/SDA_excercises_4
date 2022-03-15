@@ -2,6 +2,9 @@ def task15():
     """
     Function that accepts a comma separated sequence of words as input and prints the words in a comma-separated
     sequence after sorting them alphabetically.
+
+    Input: string
+    Output: string
     """
     pass
 
@@ -72,3 +75,28 @@ def task21():
     Output: number (e.g. 600)
     """
     pass
+
+
+def print_result(function, *args):
+    print(function.__name__)
+    print("Arguments:")
+    for arg in args:
+        print(arg)
+    result = function(*args)
+    if type(result) == tuple:
+        result1, result2 = function(*args)
+        print(f"Result 1: {result1}")
+        print(f"Type of result: {type(result1)}")
+        print(f"Result 2: {result2}")
+        print(f"Type of result: {type(result2)}")
+        print("\n")
+    else:
+        print(f"Result: {result}")
+        print(f"Type of result: {type(result)}")
+        print("\n")
+
+
+if __name__ == '__main__':
+    #task1
+    slowa = "ala,ma,kota"
+    print_result(task15, slowa)
